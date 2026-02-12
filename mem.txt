@@ -1,0 +1,10 @@
+0x0:  81 c3 00 01 00 00       //add    ebx,0x100
+0x6:  83 c1 03                //add    ecx,0x3
+0x9:  05 78 56 34 12          //add    eax,0x12345678
+0xe:  83 84 8b 00 04 00 00    //add    DWORD PTR [ebx+ecx*4+0x400],0x7f
+0x15: 7f
+0x16: 83 84 8b 00 04 00 00    //add    DWORD PTR [ebx+ecx*4+0x400],0xfffffff0
+0x1d: f0
+0x1e: 86 84 0b 08 04 00 00    //xchg   BYTE PTR [ebx+ecx*1+0x408],al
+0x25: 02 84 0b 08 04 00 00    //add    al,BYTE PTR [ebx+ecx*1+0x408]
+0x2c: f4                      //hlt
